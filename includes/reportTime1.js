@@ -28,24 +28,14 @@ $(document).ready(function(){
                 jsonData=data;
                 var i=0;
                 for(var row of data){  
-                        var tableRow=new $(
-                            '<tr>' +  
-                            '<td>' +  '<img src=' + "images/student_" + i + '.png' + ' height=' +"46" + ' ' + 'width=' +"46>"  + '</td>' +
-                            '<td>' + row.name + '</td>' +
-                            '<td>' + '<a href=' +"http://www.ynet.co.il" +'>' + row.id + '</section>' + '</td>' +
-                            '<td>' + row.class + '</td>' +
-                            '<td>' + row.subject + '</td>' +
-                            '<td>' + row.school + '</td>' + 
-                            '<td>' + row.totalHours + '</td>' +
-                            '</tr>' 
-                        )
-                        var imgUser=document.createElement('section');
-                        imgUser.style.background="url(images/student_" +i+ ".png) no-repeat";
-                        imgUser.style.width="46px";
-                        imgUser.style.height="46px";
-                        imgUser.style.display="block";
-                        $('tbody').append(tableRow);
-                        i++;        
+                        
+
+                        var option=$('<option>' + row.name + '</option>')
+                        
+                        $('#selectUser').append(option);
+                      
+
+                        
                 }     
         });
 });

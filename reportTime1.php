@@ -15,7 +15,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <script src="includes/index.js" async></script>
+            <script src="includes/reportTime1.js" async></script>
 
 
     </head>
@@ -38,10 +38,10 @@
                                         <a class="nav-link" href="http://shenkar.html5-book.co.il/2017-2018/web1/dev_203/sitArrange.html">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                                        <a class="nav-link " href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="reportTime1.php">דיווח שעות<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                        <a class="nav-link active" href="#">דיווח שעות<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">חומרי עזר<i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
@@ -59,35 +59,48 @@
                         <section id="mainUserMenu">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb" id="breadLeft">
-                                    <li class="breadcrumb-item"><a href="#">בית</a></li>
-                                    
+                                    <li class="breadcrumb-item active" aria-current="page">דיווח שעות</li>
+                                    <li class="breadcrumb-item"><a href="index.php">בית</a></li>
                                 </ol>
                             </nav>   
                              <section id="userLogin"></section>
                         </section>
 
-                        <section id="userTable">
 
-                             <table class="table table-striped" id="userTableIn">
-                                        <thead>
-                                            <tr>
-                                            <th scope="col">תמונה</th>
-                                            <th scope="col">שם</th>
-                                            <th scope="col">תז</th>
-                                            <th scope="col">כיתה</th>
-                                            <th scope="col">מקצוע</th>
-                                            <th scope="col">בית ספר</th>
-                                            <th scope="col">סיכום שעות</th>    
-                                            </tr>
-                                        </thead>
-                                        <tbody id="tableBody">
-                                        
-                                        </tbody>
-                             </table>
+                        <section id="selectStudent">    
+
+                           
+
+                                <form class="" id="selectStudentForm">
+
+
+                                    <section id="studentTopLineBox">
+                                          <p id="studentSelect">בחר תלמיד </p>
+                                    </section>
+
+                                        <section id="selectUserSmallBoxOut">
+
+                                            <section id="selectUserSmallBoxIn">
+                                                <select class="custom-select form-control" id="selectUser">
+                                                    <option selected>...</option> 
+                                                </select>
+                                            </section>
+
+
+                                        </section>
+
+
+
+                                        <section id="reportTimeSearchButtonBox">
+                                            <button type="submit" class="btn btn-primary my-1" id="reportTimeSearchButton">בחר</button>
+                                        </section>
+                                </form>
+
                         </section>
 
 
 
+                           
 
 
                             

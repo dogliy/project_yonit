@@ -10,17 +10,15 @@
 
 #userTable{
 
-        width: 500px;
+        width: 650px;
         height: 30px;   
-        float:left;
-        margin-top:15px;
-        margin-left:100px;
-        background-color: black;
-
+        margin-top:30px;
+        float: right;
+        margin-right: 17px;
 }
 
 #mainUserMenu{
-    background-color: yellow;
+   
     height: 50px;
     width: 100%;
     float: left;
@@ -44,6 +42,37 @@
     height: 50%;
     
 }
+
+#selectStudentForm{
+    height: 200px;
+    direction: rtl;
+    background-color: darkorange;
+    
+}
+
+
+
+#selectStudent{
+
+    width:100%;
+    height: 400px;
+
+    background-color: yellow;
+
+
+    float:left;
+
+
+}
+
+#userTableIn{
+    direction: rtl;
+    width:650px;
+    text-align: right;
+    
+}
+
+
 
 #topMenuSearchButton{
         height: 25px;
@@ -108,34 +137,19 @@ header{
 }
 
 #mobileMenuButton{
-
-     
-   
     border: none;
     outline: none;
-
-   
-   
 }
 
-
-
 #LogoBoxMobile{
-
     visibility: hidden;
-    
-    
-    
-
 }
 
 #LogoBoxpc{
     visibility: visible;
-
+    background-color: black;
+    margin-top:10px;
 }
-
-
-
 
 .navbar-toggle:hover,
 .navbar-toggle:active,
@@ -161,6 +175,62 @@ border-color:none !important;
     height: 80px;  
 }
 
+#selectUserSmallBoxOut{
+   width: 100%;
+    height: 40px;
+    background-color: red;
+    float:left;
+}
+
+#selectUserSmallBoxIn{
+    width: 80%;
+
+    margin:0  auto;
+
+
+}
+
+#studentTopLineBox{
+    width: 100%;
+    height: 45px;   
+    background-color: aqua;
+    float: left;
+}
+
+
+#studentSelect{
+
+    margin: 0 auto;
+    width: 80%;
+    
+    height: 30px;   
+    text-align: right;
+        
+}
+
+#reportTimeSearchButton{
+
+        height: 40px;
+
+        
+
+      
+
+}
+
+#reportTimeSearchButtonBox{
+
+    height: 40px;
+
+    width: 80%;
+    background-color: blue;
+    margin:0 auto;
+
+
+
+
+}
+
 @media screen and  (max-width:576px)
 {
     #wrapper{
@@ -184,8 +254,6 @@ border-color:none !important;
         
     }
   
-  
-
     #logo{
        margin-left:0px;
     }
