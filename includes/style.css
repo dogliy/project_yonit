@@ -17,10 +17,29 @@
         margin-right: 17px;
 }
 
+#mainUserMenuIn{
+    height: 70px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+#mainUserMenuBoxBread{
+    height: 48px;
+    width: 70%;
+    float: right;
+}
+
+#userLogin{
+    height: 55px;
+    width:130px;
+    float:left;
+}
+
+
 #mainUserMenu{
    
-    height: 50px;
-    width: 100%;
+    height: 70px;
+    width: 100%;    
     float: left;
     margin-top:10px;
 }
@@ -28,6 +47,22 @@
 #top{
         width:100%;
         height:1000px;
+}
+
+#fillReportForm{
+    width: 80%;
+    height: 330px;
+    margin:0 auto;
+    
+
+}
+
+#fillReportFormOut{
+    width: 100%;
+    height: 200px;
+    float:left;
+    margin-top:10px;
+   
 }
 
 #topMenuSearchBox{
@@ -44,24 +79,24 @@
 }
 
 #selectStudentForm{
-    height: 200px;
+    height: 133px;
     direction: rtl;
-    background-color: darkorange;
-    
 }
 
 
 
 #selectStudent{
-
     width:100%;
-    height: 400px;
-
-    background-color: yellow;
-
-
+    height: 145px;
     float:left;
+    
+ 
+}
 
+#fillFormDate{
+
+    direction: rtl;
+    text-align:right;
 
 }
 
@@ -69,7 +104,6 @@
     direction: rtl;
     width:650px;
     text-align: right;
-    
 }
 
 
@@ -178,7 +212,6 @@ border-color:none !important;
 #selectUserSmallBoxOut{
    width: 100%;
     height: 40px;
-    background-color: red;
     float:left;
 }
 
@@ -193,41 +226,125 @@ border-color:none !important;
 #studentTopLineBox{
     width: 100%;
     height: 45px;   
-    background-color: aqua;
     float: left;
 }
 
 
-#studentSelect{
+.floatright{
+    float:right;
+}
 
+
+#fillFormTimeBoxOut{
+
+    width: 40%;
+
+    float: right;
+}
+
+#fillFormTime{
+    width: 100%;
+    float:left;
+    height: 80px;
+    
+}
+
+#fillFormDateBox{
+    width: 30%;
+    float: right;
+}
+
+#fillFormLocation{
+    width: 48%;
+    float: right;
+
+}
+
+#fillFormSubject{
+    width: 48%;
+    float: left;
+}
+
+#fillFormTimeBox{
+    width: 80%;
+    margin:0 auto;
+}
+
+#fillFormTextInfo{
+
+    width: 100%;
+
+    height: 80px;
+    float: left;
+
+  
+
+}
+
+#fillFormcostBox{
+    width: 25%;
+    float: right;
+}
+
+#fillFormTextcost{
+    width: 100%;
+
+    height: 80px;
+    float: left;
+
+  
+
+}
+
+
+#fillFormTotalTimeBox{
+    float: left;
+    width:30%;
+}
+
+#studentSelect{
     margin: 0 auto;
     width: 80%;
-    
     height: 30px;   
     text-align: right;
         
 }
 
-#reportTimeSearchButton{
-
-        height: 40px;
-
-        
-
-      
+#studentSelectFill{
+   float:right;
+    height: 30px;   
+    text-align: right;
 
 }
 
-#reportTimeSearchButtonBox{
+#reportTimeSearchButton{
+        height: 40px;
+}
 
-    height: 40px;
+#reportTimeSearchButtonBoxin{
+        height: 45px;
+        width:80%;
+        margin:0 auto;
+        margin-top:10px;
+}
 
+#loadStudentInfo{
+    width: 100%;
+    float:left;
+    height: 100px;
+}
+
+#loadStudentInfoIn{
     width: 80%;
-    background-color: blue;
+    height:100px;
     margin:0 auto;
+}
 
 
-
+#reportTimeSearchButtonBoxOut{
+    height: 45px;
+    width: 100%;
+    float: left;
 
 }
 
