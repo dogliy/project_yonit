@@ -1,5 +1,33 @@
 <?php
 
+    include 'includes/db.php';
+
+    session_start();
+
+    $query="SELECT * FROM user_test_202";
+    $result=mysqli_query($connection,$query);
+
+    if(!$result){
+        die("error query");
+    }
+
+
+    if($result->num_rows>0)
+    {
+
+        while($row=$result->fetch_assoc()){
+
+                echo "id: " . $row["id"]. " name: " . $row["name"] . " email: " . $row["password"] . "<br>";
+
+        }
+
+    }
+
+
+
+
+    print_r($result);
+
 ?>
 
 
@@ -33,6 +61,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                                 <section id="addSearchFormPc"> </section>
+                                <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://shenkar.html5-book.co.il/2017-2018/web1/dev_203/sitArrange.html">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
@@ -110,7 +139,7 @@
 
                         </section>
                         
-                        <section id="fillReportFormOut">
+                    <section id="fillReportFormOut">
                             <section id="fillReportForm">
                                 
                                     <form class="" id="selectStudentForm" method="post" >
@@ -171,15 +200,36 @@
                                                         </section>
                                                     </section>
 
-
-
-
-
-
                                     </form>
                             </section>
 
                     </section>
+
+
+
+                    <section id="sqlDataOut">
+
+                            <section id="sqlDataIn">
+
+                                    <section class="oneRowInfo">
+                                            <section class="oneRowInfoDateOut allWidth"> <section class="oneRowInfoDateOutIn textCenter">1.1.2018</section></section>
+                                            <section class="oneRowInfoStartTimeOut allWidth"> <section class="oneRowInfoStartTimein textCenter">15:00 </section></section>
+                                            <section class="oneRowInfoStartTotalTimeOut allWidth"> <section class="oneRowInfoStartTotalTimeIn textCenter">2 </section></section>
+                                            <section class="oneRowInfoStartPlaceOfMeetingOut allWidth"> <section class="oneRowInfoStartPlaceOfMeetingIn textCenter">בית הילד </section></section>
+                                            <section class="oneRowInfoMeetingSubjectOut allWidth"> <section class="oneRowInfoMeetingSubjectIn textCenter"> אנגלית חיות </section></section>
+                                            <section class="oneRowInfoCostOut allWidth"> <section class="oneRowInfoCostIn textCenter"> 11.40 </section></section>
+                                    </section>
+
+                                    
+                                                            
+                            </section>
+
+
+
+                            
+
+                    </section>
+
                 </main>         
 
 

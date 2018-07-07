@@ -36,6 +36,26 @@
 }
 
 
+#sqlDataIn{
+    width: 80%;
+    height: 200px;
+    margin:0 auto;
+    background-color: yellow;
+}
+
+
+#sqlDataOut{
+
+    width: 100%;
+
+    height: 200px;
+
+    background-color: black;
+
+    float:left;
+
+}
+
 #mainUserMenu{
    
     height: 70px;
@@ -53,16 +73,126 @@
     width: 80%;
     height: 330px;
     margin:0 auto;
-    
-
 }
 
 #fillReportFormOut{
     width: 100%;
-    height: 200px;
+    height: 360px;
     float:left;
     margin-top:10px;
-   
+}
+
+
+.oneRowInfo{
+    width: 100%;
+    height: 50px;
+    float:left;
+    background-color: aqua;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.oneRowInfoDateOut{
+    height: 50px;
+    width: 18%;
+    float: right;
+}
+
+.oneRowInfoDateOutIn{
+    height: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+
+.oneRowInfoStartTimeOut{
+    height: 50px;
+    width: 18%;
+    float: right;
+}
+
+.oneRowInfoStartTimein{
+    height: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+
+.oneRowInfoStartTotalTimeOut{
+    height: 50px;
+    width: 8%;
+    float: right;
+}
+
+.oneRowInfoStartTotalTimeIn{
+    height: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+
+.oneRowInfoStartPlaceOfMeetingOut{
+    height: 50px;
+    width: 18%;
+    float: right;
+}
+
+.oneRowInfoStartPlaceOfMeetingIn{
+    height: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+.oneRowInfoMeetingSubjectOut{
+    height: 50px;
+    width: 28%;
+    float: right;
+}
+
+.oneRowInfoMeetingSubjectIn{
+    height: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+.oneRowInfoCostOut{
+    height: 50px;
+    width: 10%;
+    float: right;
+}
+
+.oneRowInfoCostIn{
+    height: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+.textCenter{
+    text-align: center;
+    line-height:50px;
+
+
+}
+
+
+.ReportBox{
+
+    width: 100%;
+    height: 50px;
+
+    background-color: red;
+
+    float: right;
+
+
+
 }
 
 #topMenuSearchBox{
@@ -75,7 +205,6 @@
 #topMenuNav{
     width: 100%;
     height: 50%;
-    
 }
 
 #selectStudentForm{
@@ -83,18 +212,21 @@
     direction: rtl;
 }
 
+#navbarTogglerDemo01{
+    width: 100px;
+    height: 100%;
 
+    background-color: yellow;
+
+}
 
 #selectStudent{
     width:100%;
     height: 145px;
     float:left;
-    
- 
 }
 
 #fillFormDate{
-
     direction: rtl;
     text-align:right;
 
@@ -115,13 +247,11 @@
 }
 
 #breadLeft{
-
     float: right;
     background-color: white;
 }
 
 #breadLeft a{
-
     text-decoration: none;
 }
 
@@ -217,10 +347,7 @@ border-color:none !important;
 
 #selectUserSmallBoxIn{
     width: 80%;
-
     margin:0  auto;
-
-
 }
 
 #studentTopLineBox{
@@ -236,17 +363,14 @@ border-color:none !important;
 
 
 #fillFormTimeBoxOut{
-
     width: 40%;
-
     float: right;
 }
 
 #fillFormTime{
     width: 100%;
     float:left;
-    height: 80px;
-    
+    height: 80px;  
 }
 
 #fillFormDateBox{
@@ -257,7 +381,6 @@ border-color:none !important;
 #fillFormLocation{
     width: 48%;
     float: right;
-
 }
 
 #fillFormSubject{
@@ -271,14 +394,9 @@ border-color:none !important;
 }
 
 #fillFormTextInfo{
-
     width: 100%;
-
     height: 80px;
     float: left;
-
-  
-
 }
 
 #fillFormcostBox{
@@ -288,12 +406,8 @@ border-color:none !important;
 
 #fillFormTextcost{
     width: 100%;
-
     height: 80px;
     float: left;
-
-  
-
 }
 
 
@@ -306,8 +420,7 @@ border-color:none !important;
     margin: 0 auto;
     width: 80%;
     height: 30px;   
-    text-align: right;
-        
+    text-align: right;      
 }
 
 #studentSelectFill{
@@ -345,7 +458,6 @@ border-color:none !important;
     height: 45px;
     width: 100%;
     float: left;
-
 }
 
 @media screen and  (max-width:576px)
@@ -367,8 +479,7 @@ border-color:none !important;
   
     #topMenuNav{
         width: 100%;
-        float:left;
-        
+        float:left;   
     }
   
     #logo{
@@ -377,20 +488,28 @@ border-color:none !important;
 
     #LogoBoxpc{
         visibility: hidden;
-
     }
 
     #LogoBoxMobile{
-    
         float:left;
-       
-
         visibility: visible;
+    }
+
+    #navbarTogglerDemo01{
+        height: 350px;
+        background-color: white;
+    }
+
+    .allWidth{
+        width: 100%;
 
     }
 
+    .oneRowInfo{
 
-    
+        height: 300px;
+
+    }
 
 
 }

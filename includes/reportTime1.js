@@ -115,12 +115,20 @@ function getSomething(){
 
 function screenTest(e){
     $('#topMenuSearchBox').remove();
+    $('#userLogInPlace').remove();
     $('#logoLink').remove();
     if(e.matches){
         $('#LogoBoxMobile').append(logoLink);
         $('#addSearchFormMobile').append($form); 
+        $('#addUserLonInMobile').append(imgUserBoxLogIn);
+        imgUserBoxLogIn.style.cssFloat="right";
+
+
+
     }else{
-        $('#addSearchFormPc').append($form);      
+        $('#addSearchFormPc').append($form);   
+        $('#userLogin').append(imgUserBoxLogIn);   
+        imgUserBoxLogIn.style.cssFloat="left";
     }
 }
 

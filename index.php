@@ -33,6 +33,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                                 <section id="addSearchFormPc"> </section>
+                                <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://shenkar.html5-book.co.il/2017-2018/web1/dev_203/sitArrange.html">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
