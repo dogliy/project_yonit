@@ -14,31 +14,20 @@
         $selectOption =(string)$_POST['selectUserPhp'];
         echo '<script> var userIdSearchValue="' . $selectOption . '";</script>'; 
     }else{
-       
-
         echo '<script>   window.location.replace("reportTime1.php"); </script>'; 
-      
     }
 
 
     if( isset($_POST['datePhp'])  AND isset($_POST['StartTimePhp']) AND isset($_POST['totalTimePhp']) AND isset($_POST['meetingLocationPhp']) AND isset($_POST['meetingSubjectPhp']) AND isset($_POST['travelCostPhp']))
     {
             echo $_POST['datePhp'];
-
             $query1="INSERT INTO user_202_meeting_info(name,total_hours,meeting_location,meeting_content,travel_cost,user_id,date_F,time_F) VALUES ('".$selectOption."','".$_POST['totalTimePhp']."','".$_POST['meetingLocationPhp']."','".$_POST['meetingSubjectPhp']."','".$_POST['travelCostPhp']."','".$selectOption."','".$_POST['datePhp']."','".$_POST['StartTimePhp']."')";
-
             if($connection->query($query1)==TRUE)
             {
                 echo '<script> alert("נוספה רשומה בהצלחה");</script>';
             }else{
-
                 echo "bed add". "<br>";
-
             }
-
-            
-          
-
     }
 
 ?>
@@ -141,7 +130,7 @@
                                                     <section id="fillFormTime">
                                                             <div class="form-group" id="fillFormDateBox">
                                                                 <label for="formGroupExampleInput2" class="floatright">תאריך</label>
-                                                                <input type="date"  name="datePhp"  class="form-control" id="fillFormDate"   min="2018-01-01" max="2018-12-31" />
+                                                                <input type="date"  name="datePhp"  class="form-control" id="fillFormDate" />
                                                             </div>
 
                                                             <section id="fillFormTimeBoxOut">

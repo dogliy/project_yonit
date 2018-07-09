@@ -11,10 +11,23 @@
 #userTable{
 
         width: 650px;
-        height: 30px;   
+         
         margin-top:30px;
-        float: right;
+        
         margin-right: 17px;
+
+        margin:0 auto;
+        
+}
+
+.notBold{
+    
+    font-weight: normal;
+}
+
+#userTableOut{
+    width: 100%;
+    float:left;
 }
 
 #mainUserMenuIn{
@@ -166,25 +179,92 @@
     margin:0 auto;
 }
 
-.textCenter{
+.textCenterd{
     text-align: center;
-    line-height:50px;
+
+}
+
+#massageTitleOut{
+    width: 100%;
+    float: left;
+    height: 60px;
+
+}
+
+
+#quizDataOut{
+    float:left;
+    width: 100%;
+    height: 400px;
+    
+}
+
+#quizDataIn{
+
+    margin:0 auto;
+    width: 80%;
+    height: 100%;
+    
 
 
 }
 
 
-.ReportBox{
+.centerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
+.marginTopTen{
+
+    margin-top:4px;
+}
+
+.dataBoxOneLine{
     width: 100%;
-    height: 50px;
+    height: 30px;
+
+    float:left;
+    
+}
+
+.dataBoxText{
+    margin: 0 auto;
+
+    width: 80%;
+
+    height: 100%;
 
     background-color: red;
 
+    border-radius: 5px;
+
+
+}
+
+.quizDataBox{
+    height: 170px;
+    width: 150px;
     float: right;
+    
+}
 
+.textCenter{
+    text-align: right;
+    line-height:50px;  
+}
 
+.btnBorder{
+    border:0px solid transparent;
+}
 
+.ReportBox{
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    float: right;
 }
 
 #topMenuSearchBox{
@@ -203,6 +283,9 @@
     height: 133px;
     direction: rtl;
 }
+
+
+
 
 #navbarTogglerDemo01{
     width: 100px;
@@ -226,11 +309,46 @@
 
 #userTableIn{
     direction: rtl;
-    width:650px;
+    width:700px;
     text-align: right;
+    
+}
+
+#markAndMistakeOut{
+    width: 100%;
+
+    height: 100px;
+
+    
+    float:left;
+
+}
+
+#markAndMistakeIn{
+
+    width: 40%;
+    height: 100%;
+    margin:0 auto;
+   
+
+}
+
+#markAndMistakeLeft{
+    width: 40%;
+    height: 100%;
+    float:left;
+ 
+
+
 }
 
 
+#markAndMistakeRight{
+    width: 40%;
+    height: 100%;
+    float:right;
+ 
+}
 
 #topMenuSearchButton{
         height: 25px;

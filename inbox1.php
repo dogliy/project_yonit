@@ -1,5 +1,8 @@
 <?php
 
+        include 'includes/db.php';
+
+
 ?>
 
 
@@ -15,7 +18,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <script src="includes/index.js" async></script>
+            <script src="includes/inbox1.js" async></script>
 
 
     </head>
@@ -36,7 +39,7 @@
                                 <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
-                                        <a class="nav-link" href="inbox1.php">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                        <a class="nav-link active" href="#">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
@@ -62,6 +65,7 @@
                                     <section id="mainUserMenuBoxBread">
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb" id="breadLeft">
+                                                <li class="breadcrumb-item active" aria-current="page">הודעות</li>
                                                 <li class="breadcrumb-item"><a href="index.php">בית</a></li>
                                             </ol>
                                         </nav>
@@ -75,16 +79,52 @@
                                     <table class="table table-striped" id="userTableIn">
                                                 <thead>
                                                     <tr>
-                                                    <th scope="col">תמונה</th>
-                                                    <th scope="col">שם</th>
-                                                    <th scope="col">תז</th>
-                                                    <th scope="col">כיתה</th>
-                                                    <th scope="col">מקצוע</th>
-                                                    <th scope="col">בית ספר</th>
-                                                    <th scope="col">סיכום שעות</th>    
+                                                    <th scope="col" >תמונה</th>
+                                                    <th scope="col" >שם</th>
+                                                    <th scope="col" >תז</th>
+                                                    <th scope="col" >תאריך</th>
+                                                    <th scope="col" >הודעה</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="tableBody">
+                                                                                                    <!--                                                                                                                                                  -->
+                                                        <?php
+                                                                                      $query="SELECT * FROM tb_202_inbox";
+                                                                                      $result=mysqli_query($connection,$query);                                        
+                                                                                      if(!$result){
+                                                                                          die("error query");
+                                                                                      }
+
+                                                                                      if($result->num_rows>0)
+                                                                                      {
+                                                                                                while($row=$result->fetch_assoc()){
+
+                                                                                                    
+
+                                                                                                    echo "<tr> 
+                                                                                                    <th scope='col' class='notBold'> " . " <img src=". 'images/student_'.$row["pic_num"] . ".png". " height='46' width='46'>" ." </th>
+                                                                                                    <th scope='col' class='notBold textCenter'> ".$row["user_name"]." </th>
+                                                                                                    <th scope='col' class='notBold textCenter'> <form action=". "userDate.php". " method="."post> "."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."    <button class="."btn-link btnBorder"."      type="."submit >".$row["user_id"]."  </button ></form>  </th>
+                                                                                                    <th scope='col' class='notBold textCenter'> ".$row["message_date"]." </th>
+                                                                                                    <th scope='col' class='notBold textCenter'> <form action=". "massageData.php". " method="."post> "."<input type="."hidden "." name="."massageId "." value="  .$row["id"].    ">"."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."   <button class="."btn-link btn "."      type="."submit >".$row["message_title"]."  </button ></form>   </th>
+                                                                                                     </tr>";
+
+
+                                                                                                }
+
+
+
+                                                                                      }
+
+
+
+                                                                     
+
+
+
+                                                        ?>
+
+                                                                                                                                                                          
 
                                                 </tbody>
                                     </table>
