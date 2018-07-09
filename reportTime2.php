@@ -2,11 +2,44 @@
 
     include 'includes/db.php';
 
-   
-
-
-
     
+
+ 
+
+    if(isset($_POST['varUserId']))
+    {
+        $selectOption =(string)$_POST['varUserId'];
+        echo '<script> var userIdSearchValue="' . $selectOption . '";</script>'; 
+    }else if(isset($_POST['selectUserPhp'])){
+        $selectOption =(string)$_POST['selectUserPhp'];
+        echo '<script> var userIdSearchValue="' . $selectOption . '";</script>'; 
+    }else{
+       
+
+        echo '<script>   window.location.replace("reportTime1.php"); </script>'; 
+      
+    }
+
+
+    if( isset($_POST['datePhp'])  AND isset($_POST['StartTimePhp']) AND isset($_POST['totalTimePhp']) AND isset($_POST['meetingLocationPhp']) AND isset($_POST['meetingSubjectPhp']) AND isset($_POST['travelCostPhp']))
+    {
+            echo $_POST['datePhp'];
+
+            $query1="INSERT INTO user_202_meeting_info(name,total_hours,meeting_location,meeting_content,travel_cost,user_id,date_F,time_F) VALUES ('".$selectOption."','".$_POST['totalTimePhp']."','".$_POST['meetingLocationPhp']."','".$_POST['meetingSubjectPhp']."','".$_POST['travelCostPhp']."','".$selectOption."','".$_POST['datePhp']."','".$_POST['StartTimePhp']."')";
+
+            if($connection->query($query1)==TRUE)
+            {
+                echo '<script> alert("נוספה רשומה בהצלחה");</script>';
+            }else{
+
+                echo "bed add". "<br>";
+
+            }
+
+            
+          
+
+    }
 
 ?>
 
@@ -23,7 +56,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <script src="includes/reportTime1.js" async></script>
+            <script src="includes/reportTime2.js" async></script>
 
 
     </head>
@@ -31,6 +64,7 @@
 
 
     <body>
+            
            <div id="wrapper">  
                 <header>
                        <section id="LogoBoxpc"><a id="logo"></a></section>
@@ -70,7 +104,8 @@
                                     <section id="mainUserMenuBoxBread">
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb" id="breadLeft">
-                                                <li class="breadcrumb-item active" aria-current="page">דיווח שעות</li>
+                                                <li class="breadcrumb-item active" aria-current="page">הוספה</li>
+                                                <li class="breadcrumb-item"><a href="reportTime1.php">דיווח שעות</a></li>
                                                 <li class="breadcrumb-item"><a href="index.php">בית</a></li>
                                             </ol>
                                         </nav>
@@ -80,35 +115,9 @@
                         </section>
 
 
-                        <section id="selectStudent">    
-
-                    
-                                <form class="" id="selectStudentForm" onsubmit="" action="reportTime2.php" method="post" >
-                                    <section id="studentTopLineBox">
-                                          <p id="studentSelect">בחר תלמיד </p>
-                                    </section>
-
-                                        <section id="selectUserSmallBoxOut">
-                                            <section id="selectUserSmallBoxIn">
-                                                <select class="custom-select form-control" id="selectUser" name="selectUserPhp">
-                                                    <option selected>...</option> 
-                                                </select>
-                                            </section>
-                                        </section>
-
-                                        <section id="reportTimeSearchButtonBoxOut">
-                                            <section id="reportTimeSearchButtonBoxin">
-                                                <button type="submit" name="submit1" class="btn btn-primary my-1" id="reportTimeSearchButton">בחר</button>
-                                            </section>
-                                        </section>
-
-                                </form>
-
-                    
-                        </section>     
 
 
-                 
+                      
 
 
                         <section id="loadStudentInfo">
@@ -122,7 +131,7 @@
                     <section id="fillReportFormOut">
                             <section id="fillReportForm">
                                 
-                                    <form class="" id="selectStudentForm" method="post" >
+                                    <form  id="selectStudentForm"  method="post" action="reportTime2.php">
                                         
                                                 <section id="studentTopLineBox">
                                                     <p id="studentSelectFill">מלא פרטים</p>
@@ -132,20 +141,20 @@
                                                     <section id="fillFormTime">
                                                             <div class="form-group" id="fillFormDateBox">
                                                                 <label for="formGroupExampleInput2" class="floatright">תאריך</label>
-                                                                <input type="date"  name="trip"  class="form-control" id="fillFormDate" value="2018-07-22"  min="2018-01-01" max="2018-12-31" />
+                                                                <input type="date"  name="datePhp"  class="form-control" id="fillFormDate"   min="2018-01-01" max="2018-12-31" />
                                                             </div>
 
                                                             <section id="fillFormTimeBoxOut">
                                                                 <div class="form-group"  id="fillFormTimeBox">
                                                                     <label for="formGroupExampleInput2" class="floatright">&nbsp; &nbsp;משעה  </label>
-                                                                    <input type="number" name="age" class="form-control" id="fillFormFromTime" value ="" min="22"max="67">
+                                                                    <input type="time" name="StartTimePhp" class="form-control" id="fillFormFromTime" min="1"max="24">
 
                                                                 </div>
                                                             </section>
 
                                                             <div class="form-group"  id="fillFormTotalTimeBox" >
                                                                 <label for="formGroupExampleInput2" class="floatright">סהכ שעות</label>
-                                                                <input type="number" name="age" class="form-control" id="age" value ="" min="22"max="67">
+                                                                <input type="number" name="totalTimePhp" class="form-control" id="fillFormTotalTimeIn" min="0"max="6">
 
                                                             </div>
                                                     </section>
@@ -155,11 +164,11 @@
                                             
                                                     <div class="form-group" id="fillFormLocation">
                                                         <label for="formGroupExampleInput" class="floatright">מיקום הפגישה</label>
-                                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                                        <input type="text" name="meetingLocationPhp" class="form-control" id="fillFormLocationIn" >
                                                     </div>
                                                     <div class="form-group" id="fillFormSubject">
                                                         <label for="formGroupExampleInput2" class="floatright">נושא הפגישה</label>
-                                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                                                        <input type="text" name="meetingSubjectPhp" class="form-control" id="fillFormSubjectIn">
                                                     </div>
 
                                                 </section>
@@ -167,18 +176,34 @@
 
                                                 <section id="fillFormTextcost">              
                                                             <div class="form-group"  id="fillFormcostBox" >
-                                                                <label for="formGroupExampleInput2" class="floatright">סהכ שעות</label>
-                                                                <input type="number" name="age" class="form-control" id="age" value ="" min="22"max="67">
+                                                                <label for="formGroupExampleInput2" class="floatright">הוצאות</label>
+                                                                <input type="number" name="travelCostPhp" class="form-control" id="fillFormTextcostIn" value ="">
                                                             </div>
                                                 </section>
                                                 
-
+                                                <input type="hidden" name="varUserId" value="<?php echo $selectOption ?>" />
 
                                                     <section id="fillTimeSearchButtonBoxOut">
                                                         <section id="fillreportTimeSearchButtonBoxin">
-                                                            <button type="submit" class="btn btn-primary my-1" id="reportTimeSearchButton">הוסף</button>
+                                                            <button type="button" class="btn btn-primary my-1" id="reportTimeSearchButton1">הוסף</button>
                                                         </section>
                                                     </section>
+
+                                                   <script> $('#reportTimeSearchButton1').click(function(){
+
+            
+                                                        if(      ($('#fillFormTotalTimeIn').val() !="")    && ($('#fillFormDate').val() !="") && ($('#fillFormFromTime').val() !="") && ($('#fillFormLocationIn').val() !="") && ($('#fillFormSubjectIn').val() !="") && ($('#fillFormTextcostIn').val() !="") ){
+
+                                                                    $('#selectStudentForm').submit();
+
+                                                        }else{
+
+                                                            alert("טופס לא מלא");
+                                                        }
+                                                          
+
+                                                   });
+                                                   </script>
 
                                     </form>
                             </section>
@@ -187,15 +212,49 @@
 
 
 
+                    <section id="sqlDataOut">
+
+                            <section id="sqlDataIn">
+  
+                                    <?php    
+                                            if(isset($_POST['varUserId']) OR isset($_POST['selectUserPhp']))
+                                            {
+                                                         $query="SELECT * FROM user_202_meeting_info WHERE user_id=$selectOption";
+                                                        $result=mysqli_query($connection,$query);
+                                                        if(!$result){
+                                                            die("error query");
+                                                        }
+                                                        if($result->num_rows>0)
+                                                        {
+                                                            while($row=$result->fetch_assoc()){
+                                                                    echo "<section class=' oneRowInfo ' '>
+                                                                    <section class='oneRowInfoDateOut allWidth'  '>  <section class='textCenter oneRowInfoDateOutIn' '>" . $row["date_F"] .  " </section>  </section> 
+                                                                    <section class='oneRowInfoStartTimeOut allWidth'  '>  <section class='textCenter oneRowInfoStartTimein' '>" . $row["time_F"] .  " </section>  </section> 
+                                                                    <section class='oneRowInfoStartTotalTimeOut allWidth'  '>  <section class='textCenter oneRowInfoStartTotalTimeIn' '>" . $row["total_hours"] .  " </section>  </section>
+                                                                    <section class='oneRowInfoStartPlaceOfMeetingOut allWidth'  '>  <section class='textCenter oneRowInfoStartPlaceOfMeetingIn' '>" . $row["meeting_location"] .  " </section>  </section>
+                                                                    <section class='oneRowInfoMeetingSubjectOut allWidth'  '>  <section class='textCenter oneRowInfoMeetingSubjectIn' '>" . $row["meeting_content"] .  " </section>  </section>
+                                                                    <section class='oneRowInfoCostOut allWidth'  '>  <section class='textCenter oneRowInfoCostIn' '>" . $row["travel_cost"] .  " </section>  </section>
+                                                                    </section>";
+                                                            }
+                                                        }
+                                            }
+                                    ?>
+
+
+
+
+                                                 
+
+
+
+
+                                                            
+                            </section>
+
+
+                    </section>
 
                 </main>         
-
-
-
-
            </div>
-
     </body>
-
-
 </html>

@@ -56,7 +56,7 @@ imgUserBoxLogIn.appendChild(userNameBoxLogIn);
 imgUserBoxLogIn.appendChild(userboxLogOff);
 
 
-
+var userName;
 
 
 
@@ -65,11 +65,7 @@ $form=$(" <form action='/action_page.php' class='form-inline' id='topMenuSearchB
 
 $(document).ready(function(){
     
-    
-    if(flag==0){
-        $('#fillReportFormOut').css('visibility', 'hidden');
-    }
-    
+        chackUser(userIdSearchValue);
         $('#userLogin').append(imgUserBoxLogIn)
         screenTest(mql);
         var json_data=[];
@@ -78,15 +74,12 @@ $(document).ready(function(){
                 jsonData=data;
                 var i=0;
                 for(var row of data){  
-                        
-                        var option=$('<option' + '  value='  + row.id + ' >' + row.name + '</option>')   
+                        var option=$('<option' + '  value=' + row.name + ' >' + row.name + '</option>')   
                         $('#selectUser').append(option);      
                 }     
         });
 
-    
 });
-
 
 function getSomething(){
     var result = null;
@@ -103,7 +96,6 @@ function getSomething(){
       return result;  
 }
 
-
 function screenTest(e){
     $('#topMenuSearchBox').remove();
     $('#userLogInPlace').remove();
@@ -113,8 +105,6 @@ function screenTest(e){
         $('#addSearchFormMobile').append($form); 
         $('#addUserLonInMobile').append(imgUserBoxLogIn);
         imgUserBoxLogIn.style.cssFloat="right";
-
-
 
     }else{
         $('#addSearchFormPc').append($form);   
@@ -127,8 +117,82 @@ mql.addListener(screenTest);
 
 
 
+function chackUser(userIdSearch){
+
+   
+    var strUser = $( "#selectUser option:selected" ).text();
+    $('#UserBoxLine').remove();
+    var i=0;
+    for(var row of myData){ 
+        if( row.id==userIdSearch ){
+            flag=1;    
+            var tableRow=new $(
+                '<tr>' +  
+                '<td>' +  '<img src=' + "images/student_" + i + '.png' + ' height=' +"46" + ' ' + 'width=' +"46>"  + '</td>' +
+                '<td>' + row.name + '</td>' +
+                '<td>' + '<a href=' +"http://www.ynet.co.il" +'>' + row.id + '</section>' + '</td>' +
+                '<td>' + row.class + '</td>' +
+                '<td>' + row.subject + '</td>' +
+                '<td>' + row.school + '</td>' + 
+                '<td>' + row.totalHours + '</td>' +
+                '</tr>' 
+            )
+
+            var imgUserBox=document.createElement('section');
+            imgUserBox.style.width="100%";
+            imgUserBox.style.height="46px";
+            imgUserBox.style.cssFloat="left";
+
+            var imgUser=document.createElement('section');
+            imgUser.style.background="url(images/student_" +i+ ".png) no-repeat";
+            imgUser.style.width="46px";
+            imgUser.style.height="46px";
+            imgUser.style.display="block";
+            imgUser.style.cssFloat="right";
+            imgUser.style.marginTop="5px";
+            
+            var userNameBox=document.createElement('section');
+            userNameBox.innerHTML=row.name;
+            userNameBox.style.cssFloat="right";
+            userNameBox.style.marginTop="10px";
+
+            var userIdbox=document.createElement('a');
+            userIdbox.innerHTML=row.id;
+            userIdbox.style.cssFloat="right";
+            userIdbox.href="http://www.ynet.co.il";
+            userIdbox.style.marginRight="20px";
+            userIdbox.style.marginTop="12px";
+            userIdbox.style.textDecoration="none";
+
+            var userObjBox=document.createElement('section');
+            userObjBox.id="UserBoxLine"
+            userObjBox.style.width="190px";
+            userObjBox.style.height="90px";
+            userObjBox.style.borderBottom = " solid #0000FF";
+            userObjBox.style.cssFloat="right";
+
+            imgUserBox.appendChild(imgUser);
 
 
+
+            userObjBox.appendChild(imgUserBox);
+            userObjBox.appendChild(userNameBox);
+            userObjBox.appendChild(userIdbox);
+
+            $('#loadStudentInfoIn').append(userObjBox);
+            userName=row.name;
+        }   
+        i++; 
+    }   
+    if(flag==1){
+    
+        flag=0;
+
+
+    }else {
+  
+    }
+}
 
 
 
