@@ -1,6 +1,6 @@
 var mql=window.matchMedia('(max-width: 576px)');
 var logoLink=document.createElement('a');
-logoLink.style.background="url(../images/I_SMART_logo.png) no-repeat";
+logoLink.style.background="url(images/I_SMART_logo.png) no-repeat";
 logoLink.style.width="165px";
 logoLink.style.height="33px";
 logoLink.style.display="block";

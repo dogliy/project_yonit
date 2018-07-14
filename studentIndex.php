@@ -15,7 +15,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <script src="includes/index.js" async></script>
+            <script src="includes/studentIndex.js" async></script>
 
 
     </head>
@@ -32,7 +32,7 @@
                                      <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                                <section id="addSearchFormPc"> </section>
+                             
                                 <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
@@ -47,16 +47,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">חומרי עזר<i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
                                     </li>
-                                </ul>
-                                <section id="addSearchFormMobile"></section>       
+                                </ul> 
                             </div>                
                         </nav>
                 </header>
-
-                
-
                 <main>
-
                         <section id="mainUserMenu">
                             <section id="mainUserMenuIn">
                                     <section id="mainUserMenuBoxBread">
@@ -69,28 +64,35 @@
                                     <section id="userLogin"></section>
                             </section>
                         </section>
-                        <section id="userTableOut">
-                                <section id="userTable">
 
-                                    <table class="table table-striped" id="userTableIn">
-                                                <thead>
-                                                    <tr>
-                                                    <th scope="col">תמונה</th>
-                                                    <th scope="col">שם</th>
-                                                    <th scope="col">תז</th>
-                                                    <th scope="col">כיתה</th>
-                                                    <th scope="col">מקצוע</th>
-                                                    <th scope="col">בית ספר</th>
-                                                    <th scope="col">סיכום שעות</th>    
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="tableBody">
 
-                                                </tbody>
-                                    </table>
+
+
+                        <section id="studentIndexMenuBoxOut">
+                                <section id="studentIndexMenuBoxIn">
+
+                                  
+                                        <section id="studentIndexHelpBoxOut">
+                                                <section id="studentIndexHelpBoxIn">
+                                                    <a href="#"><section id="HelpBox" class=" floatLeft"></section></a>
+                                                </section>
+                                        </section>
+
+                                        <section id="studentIndexGamesBoxOut">
+                                                <section id="studentIndexGamesBoxIn">
+                                                    <a href="#"><section id="gameBox" class=" floatLeft"></section></a>
+                                                </section>
+                                        </section>
+
+                                        <section id="studentIndexQuizBoxOut">
+                                                <section id="studentIndexQuizBoxIn">
+                                                    <a href="studentQuizPage1.php"><section id="quizBox" class=" floatLeft"></section></a>
+                                                </section>
+                                        </section>
+                                </form>
+
                                 </section>
                         </section>
-         
                 </main>         
            </div>
     </body>

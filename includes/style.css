@@ -217,6 +217,11 @@
     width: 50%;
 }
 
+.logInMarginTop{
+
+    margin-top:25px;
+}
+
 .marginTopTen{
 
     margin-top:4px;
@@ -225,30 +230,65 @@
 .dataBoxOneLine{
     width: 100%;
     height: 30px;
-
     float:left;
-    
 }
 
 .dataBoxText{
     margin: 0 auto;
-
     width: 80%;
-
     height: 100%;
+    background-color: #f8f09a;
+    border-radius: 5px;
+}
 
-    background-color: red;
 
+.logInPageButton{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
 
+}
 
+.LogInPageButtonBox{
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+#logInPageOut{
+        width: 100%;
+        height: 200px;
+        margin-top:50px;
+        float:left;
+}
+
+#logInPageIn{
+   width: 30%;
+   height: 100%;
+   margin:0 auto;
+   border: solid;
+   border-width: 1px;
+   border-radius: 7px;
+}
+
+.smallFontSize{
+    font-size: 20px;
+}
+
+.wrongAnswer{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: red;
 }
 
 .quizDataBox{
     height: 170px;
     width: 150px;
-    float: right;
-    
+    float: right;  
 }
 
 .textCenter{
@@ -384,7 +424,18 @@
  }
 
 
+#logInPageLogoOut{
+    width: 100%;
+    height: 90px;
+    float:left;
+}
 
+#logInPageLogIn{
+    width:165px;
+    height:100%;
+    margin:0 auto;
+ 
+}
 
 header{
         width: 100%;
@@ -404,6 +455,16 @@ header{
     margin-left:22px;   
 }
 
+
+#logInPageLogo{
+    background: url(../images/I_SMART_logo.png) no-repeat;
+    height: 33px;
+    width: 165px;
+    display: block;
+    float:left;
+    margin-top:25px;    
+}
+
 #LogoBox{ 
     height:33px;
     width: 165px;
@@ -421,8 +482,76 @@ header{
 
 #LogoBoxpc{
     visibility: visible;
-    background-color: black;
+   
     margin-top:10px;
+}
+
+
+#studentIndexMenuBoxOut{
+    margin-top:30px;
+    width: 100%;
+    height: 100px;
+    float:left;
+}
+
+.floatLeft{
+
+float: left;
+}
+
+
+#studentIndexHelpBoxOut{
+    width: 33%;
+    height:  100%;
+    float:left;
+}
+
+
+#studentIndexQuizBoxOut{
+    width: 34%;
+    height:  100%;
+    float:left;
+}
+
+#studentIndexGamesBoxOut{
+    width: 33%;
+    height: 100%;
+    float:left;
+}
+
+
+#studentIndexHelpBoxIn{
+    width: 100px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#studentIndexGamesBoxIn{
+    width: 100px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#studentIndexQuizBoxIn{
+    width: 100px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.circle{
+        width: 100px;
+        height: 100px;
+        background: red;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+}
+
+
+#studentIndexMenuBoxIn{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .navbar-toggle:hover,
@@ -441,6 +570,55 @@ border-color:none !important;
     position: relative;
     left:-8px;
     top:-1px;
+}
+
+
+#quizBox{
+    background: url(../images/quizBox.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+
+#HelpBox{
+    background: url(../images/helpBox.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+
+#gameBox{
+    background: url(../images/gameBox.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+
+#mathLogo{
+    background: url(../images/mathLogo.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+
+.fromHiddenInput {
+	visibility: hidden;
+}
+
+
+
+#hebrewLogo{
+    background: url(../images/hebrewLogo.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+
+#englishLogo{
+    background: url(../images/englishLogo.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
 }
 
 #topMenuUl{
@@ -620,6 +798,17 @@ border-color:none !important;
         height: 300px;
 
     }
-
-
+    #studentIndexHelpBoxOut{
+        width: 100%;
+    }
+    #studentIndexQuizBoxOut{
+        width: 100%;
+        margin-top:20px;
+    
+    }
+    #studentIndexGamesBoxOut{
+        width: 100%;
+        margin-top:20px;
+    }
+    
 }

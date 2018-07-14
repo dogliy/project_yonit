@@ -24,10 +24,10 @@
     $result3=mysqli_query($connection,$query3);
 
 
+   
     if(!$result3){
         die("error query");
     }
-    
     if(!$result2){
         die("error query");
     }else{
@@ -155,7 +155,7 @@
 
                                                     <?php 
                                                     
-                                                       
+
 
 
 
@@ -164,18 +164,53 @@
                                                             {
                                                                 while($row3=$result3->fetch_assoc()){
 
-                                       
+                                                                    $query4="SELECT * FROM tb_202_quiz_load_game WHERE animal_name= '".$row3["animal_test"]."' ";
+                                                                    $result4=mysqli_query($connection,$query4);
+                                                                
+                                                                
+                                                                    if(!$result4){
+                                                                        die("error query");
+                                                                    }
 
-                                                                                
-                                                                                
-                                                                               
-                                                     
+
+                                                                    $row5=$result4->fetch_assoc();
+
+
+
+                                                                    if($row3["animal_mistake"]==$row5["row_1"])
+                                                                    {
+                                                                        $row1_data="  <p class='wrongAnswer '>". $row5["row_1"] ."  </p> "; 
+
+                                                                    }else{
+                                                                                $row1_data=$row5["row_1"];
+                                                                    }
+
+                                                                    if($row3["animal_mistake"]==$row5["row_2"])
+                                                                    {
+                                                                        $row2_data="  <p class='wrongAnswer '>". $row5["row_2"] ."  </p> "; 
+
+                                                                    }else{
+                                                                                $row2_data=$row5["row_2"];
+                                                                    }
+
+                                                                    if($row3["animal_mistake"]==$row5["row_3"])
+                                                                    {
+                                                                        $row3_data="  <p class='wrongAnswer '>". $row5["row_3"] ."  </p> "; 
+
+                                                                    }else{
+                                                                                $row3_data=$row5["row_3"];
+                                                                    }
+
+
+                                                                    
+                                                                 
+
 
                                                                         echo "  <section class='quizDataBox'> 
                                                                     <img src='images/animal".$row3["animal_test"].".png' width='64px' height='64px' class='centerImg'>
-                                                                    <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText'>   </section></section>
-                                                                    <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText'>    </section></section>
-                                                                    <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText'>   </section></section>
+                                                                    <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText textCenterd'> ".  $row1_data ."  </section></section>
+                                                                    <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText textCenterd'>  ".  $row2_data  ."   </section></section>
+                                                                    <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText textCenterd'> ".  $row3_data  ."   </section></section>
                                                                     </section>";
 
 
@@ -202,6 +237,10 @@
            </div>
 
     </body>
+
+    <?php
+        mysqli_close($connection);
+    ?>
 
 
 </html>

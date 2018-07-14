@@ -1,6 +1,6 @@
 var mql=window.matchMedia('(max-width: 576px)');
 var logoLink=document.createElement('a');
-logoLink.style.background="url(../images/I_SMART_logo.png) no-repeat";
+logoLink.style.background="url(images/I_SMART_logo.png) no-repeat";
 logoLink.style.width="165px";
 logoLink.style.height="33px";
 logoLink.style.display="block";
@@ -24,7 +24,7 @@ userNameBoxLogIn.style.marginRight="5px";
 var userboxLogOff=document.createElement('a');
 userboxLogOff.innerHTML="התנתק";
 userboxLogOff.style.cssFloat="right";
-userboxLogOff.href="http://www.ynet.co.il";
+userboxLogOff.href="login.php";
 userboxLogOff.style.marginRight="20px";
 userboxLogOff.style.marginTop="2px";
 userboxLogOff.style.textDecoration="none";
