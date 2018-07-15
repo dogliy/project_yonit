@@ -49,14 +49,14 @@
                              
                                 <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="inbox1.php">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li class="nav-item">
+                                     <li class="nav-item">
                                         <a class="nav-link" href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="reportTime1.php">דיווח שעות<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                        <a class="nav-link active" href="studentQuizPage1.php">שאלונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">משחקים<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">חומרי עזר<i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
@@ -122,13 +122,26 @@
                                                         
                                                         ?>
 
-                                                        <button type="button"  id="studentQuizButton" class="btn btn-primary">Submit</button>
+                                                       
                                                 </form>
+
+                                                                        <section id="studentQuizButtonBoxOut">
+                                                    <section id="studentQuizButtonBoxIn">
+                                                    <button type="button"  id="studentQuizButton" class="btn btn-primary">שלח</button>
+                                                    </section>
+
+                                                       </section>
+
 
                                         </section>
 
+                                            
+
                                 </section>
 
+                        
+
+                                
 
 
 
@@ -149,4 +162,9 @@
                 </main>         
            </div>
     </body>
+
+                <?php
+                      mysqli_close($connection);
+                ?>
+
 </html>

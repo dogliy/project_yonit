@@ -46,14 +46,59 @@ imgUserBoxLogIn.appendChild(userboxLogOff);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 $form=$(" <form action='/action_page.php' class='form-inline' id='topMenuSearchBox'> <button class='btn btn-outline-success' type='submit' id='topMenuSearchButton'><section id='topMenuSearchLogo'></section></button>  <input class='form-control' type='search' placeholder='' aria-label='Search' id='topMenuSearchText'> </form>");
 
 
 
 
 $(document).ready(function(){
- 
-        screenTest(mql);      
+
+       
+        
+        screenTest(mql);
+         var json_data=[];
+
+        $.getJSON("includes/index.json",function(data){  
+                console.log(data);
+                jsonData=data;
+                var i=0;
+                for(var row of data){  
+                        var tableRow=new $(
+                            '<tr>' +  
+                            '<td>' +  '<img src=' + "images/student_" + row.picUrl + '.png' + ' height=' +"46" + ' ' + 'width=' +"46>"  + '</td>' +
+                            '<td>' + row.name + '</td>' +
+                            '<td>' + '<form action=' +"userDate.php"+ ' method=' +"post" + '><input type='+"hidden" + ' name=' +"userId" + ' value='+ row.id+ ' ><button class='+"btn-link btnBorder"+' type='+"submit"+'>'+row.id+'</button></form></td> '+
+                            '<td>' + row.class + '</td>' +
+                            '<td>' + row.subject + '</td>' +
+                            '<td>' + row.school + '</td>' + 
+                            '<td>' + row.totalHours + '</td>' +
+                            '</tr>' 
+                        )
+
+
+                       
+
+
+                        var imgUser=document.createElement('section');
+                        imgUser.style.background="url(images/student_" +row.picUrl+ ".png) no-repeat";
+                        imgUser.style.width="46px";
+                        imgUser.style.height="46px";
+                        imgUser.style.display="block";
+                        $('tbody').append(tableRow);
+                        i++;        
+                }     
+        });
 });
 
 
@@ -68,6 +113,9 @@ function screenTest(e){
         $('#addSearchFormMobile').append($form); 
         $('#addUserLonInMobile').append(imgUserBoxLogIn);
         imgUserBoxLogIn.style.cssFloat="right";
+
+
+
     }else{
         $('#addSearchFormPc').append($form);   
         $('#userLogin').append(imgUserBoxLogIn);   

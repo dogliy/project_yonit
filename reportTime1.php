@@ -44,13 +44,13 @@
                                 <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
-                                        <a class="nav-link" href="http://shenkar.html5-book.co.il/2017-2018/web1/dev_203/sitArrange.html">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                        <a class="nav-link" href="inbox1.php">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link " href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#">דיווח שעות<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                        <a class="nav-link active" href="reportTime1.php">דיווח שעות<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">חומרי עזר<i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
@@ -71,7 +71,7 @@
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb" id="breadLeft">
                                                 <li class="breadcrumb-item active" aria-current="page">דיווח שעות</li>
-                                                <li class="breadcrumb-item"><a href="index.php">בית</a></li>
+                                                <li class="breadcrumb-item"><a href="indexTutor.php">בית</a></li>
                                             </ol>
                                         </nav>
                                     </section>

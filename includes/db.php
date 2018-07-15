@@ -10,6 +10,9 @@ if(mysqli_connect_errno()) {
  );
 }
 
-
+if(!mysqli_set_charset($connection, 'utf8')) {
+    echo 'the connection is not in utf8';
+    exit();
+}
 
 ?>

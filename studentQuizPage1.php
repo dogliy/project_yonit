@@ -7,7 +7,7 @@
 <html>
     <head>
 
-            <title>Ismart home</title>
+            <title>Quiz</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="includes/style.css">
@@ -36,13 +36,13 @@
                                 <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
-                                        <a class="nav-link" href="inbox1.php">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="reportTime1.php">דיווח שעות<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                        <a class="nav-link active" href="studentQuizPage1.php">שאלונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">משחקים<i class="fa fa-check-square-o" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">חומרי עזר<i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="sr-only">(current)</span></a>

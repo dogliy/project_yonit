@@ -44,18 +44,7 @@ imgUserBoxLogIn.appendChild(userNameBoxLogIn);
 imgUserBoxLogIn.appendChild(userboxLogOff);
 
 
-
-
-
-
 var myData = getSomething();
-
-
-
-
-
-
-
 
 $form=$(" <form action='/action_page.php' class='form-inline' id='topMenuSearchBox'> <button class='btn btn-outline-success' type='submit' id='topMenuSearchButton'><section id='topMenuSearchLogo'></section></button>  <input class='form-control' type='search' placeholder='' aria-label='Search' id='topMenuSearchText'> </form>");
 
@@ -63,9 +52,8 @@ $form=$(" <form action='/action_page.php' class='form-inline' id='topMenuSearchB
 
 
 $(document).ready(function(){
-
-        chackUser(userIdSearchValue);  
-        screenTest(mql);        
+        chackUser(userIdSearchValue); 
+        screenTest(mql);      
 });
 
 
@@ -80,9 +68,6 @@ function screenTest(e){
         $('#addSearchFormMobile').append($form); 
         $('#addUserLonInMobile').append(imgUserBoxLogIn);
         imgUserBoxLogIn.style.cssFloat="right";
-
-
-
     }else{
         $('#addSearchFormPc').append($form);   
         $('#userLogin').append(imgUserBoxLogIn);   
@@ -91,6 +76,26 @@ function screenTest(e){
 }
 
 mql.addListener(screenTest);
+
+function getSomething(){
+    var result = null;
+    $.ajax({
+        url: 'includes/index.json',
+        dataType: 'json',
+        async: false,
+        data: myData,
+        success: function(data) {
+            result=data;
+        }
+
+      });
+      return result;  
+}
+
+
+
+
+
 
 function getSomething(){
     var result = null;

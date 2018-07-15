@@ -1,22 +1,6 @@
 <?php
-   
-    include 'includes/db.php';
-    if(isset($_POST['userId'])){
-        $selectOption =(string)$_POST['userId'];
-        echo '<script> var userIdSearchValue="' . $selectOption . '";</script>'; 
-    }else{
-        echo '<script>   window.location.replace("indexTutor.php"); </script>'; 
-    }
 
-    $query="SELECT * FROM tb_202_quiz WHERE user_id=$selectOption";
-    $result=mysqli_query($connection,$query);
-
-    if(!$result){
-        die("error query");
-    }
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -31,8 +15,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <script src="includes/userDate.js" async></script>
-            <link href="https://fonts.googleapis.com/css?family=Rubik&amp;subset=hebrew" rel="stylesheet">
+            <script src="includes/indexTutor.js" async></script>
 
 
     </head>
@@ -53,7 +36,7 @@
                                 <section id="addUserLonInMobile"></section>
                                 <ul class="navbar-nav ml-auto " id="topMenuText" >
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                        <a class="nav-link" href="inbox1.php">הודעות<i class="fa fa-list-alt" aria-hidden="true"></i></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">ציונים<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
@@ -79,7 +62,6 @@
                                     <section id="mainUserMenuBoxBread">
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb" id="breadLeft">
-                                                <li class="breadcrumb-item active" aria-current="page">פרטים</li>
                                                 <li class="breadcrumb-item"><a href="indexTutor.php">בית</a></li>
                                             </ol>
                                         </nav>
@@ -87,83 +69,31 @@
                                     <section id="userLogin"></section>
                             </section>
                         </section>
-
-
-                        <section id="loadStudentInfo">
-                             <section id="loadStudentInfoIn">
-
-                             </section>
-                        </section>
-
-
-
                         <section id="userTableOut">
-                                <section id="userGradeTable">
+                                <section id="userTable">
 
-                                    <table class="table table-striped" id="userGradeTableIn">
+                                    <table class="table table-striped" id="userTableIn">
                                                 <thead>
                                                     <tr>
-                                                    <th scope="col" >בוחן</th>
-                                                    <th scope="col" >ציון</th>
-                                                    <th scope="col" >מספר טעויות</th>
+                                                    <th scope="col">תמונה</th>
+                                                    <th scope="col">שם</th>
+                                                    <th scope="col">תז</th>
+                                                    <th scope="col">כיתה</th>
+                                                    <th scope="col">מקצוע</th>
+                                                    <th scope="col">בית ספר</th>
+                                                    <th scope="col">סיכום שעות</th>    
                                                     </tr>
                                                 </thead>
                                                 <tbody id="tableBody">
-                                                                                                    <!--                                                                                                                                                  -->
-                                                        <?php
-                                                                                     
-
-                                                                                      if($result->num_rows>0)
-                                                                                      {
-                                                                                                while($row=$result->fetch_assoc()){
-
-                                                                                                    
-
-                                                                                                    echo "<tr> 
-                                                                                                    <th scope='col' class='notBold textCenter fontGoogle'>אנגלית-חיות</th>
-                                                                                                    <th scope='col' class='notBold textCenter fontGoogle'> ".$row["mark_num"]." </th>
-                                                                                                    <th scope='col' class='notBold textCenter fontGoogle'> ".$row["mistake_count"]." </th>
-                                                                                                     </tr>";
-
-
-                                                                                                }
-
-
-
-                                                                                      }
-
-
-
-                                                                     
-
-
-
-                                                        ?>
-
-                                                                                                                                                                          
 
                                                 </tbody>
                                     </table>
                                 </section>
                         </section>
-
-
-
-                       
-                            
+         
                 </main>         
-
-
-
-
            </div>
 
+           
     </body>
-
-
 </html>
-
-
-   <?php
-        mysqli_close($connection);
-    ?>

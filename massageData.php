@@ -48,7 +48,8 @@
     <head>
 
             <title>Ismart home</title>
-            <meta charset="UTF-8">
+            
+            
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="includes/style.css">
             <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -56,6 +57,7 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
             <script src="includes/massageData.js" async></script>
+            <meta charset="utf-8" /> 
 
 
     </head>
@@ -103,7 +105,7 @@
                                             <ol class="breadcrumb" id="breadLeft">
                                                  <li class="breadcrumb-item active" aria-current="page">תוכן</li>
                                                 <li class="breadcrumb-item"><a href="inbox1.php">הודעות</a></li>
-                                                <li class="breadcrumb-item"><a href="index.php">בית</a></li>
+                                                <li class="breadcrumb-item"><a href="indexTutor.php">בית</a></li>
                                             </ol>
                                         </nav>
                                     </section>
@@ -124,14 +126,12 @@
                                     <p class="textCenterd"> <?php echo $row2["message_title"]; ?>   </p>
 
                         </section>
-
-
                         <section id="markAndMistakeOut">
                                 <section id="markAndMistakeIn">
                                     <section id="markAndMistakeLeft">
                                          <p class="textCenterd">מספר טעויות</p>
                                             
-                                             <p class="textCenterd"> <?php echo $row["mistake_count"]; ?>   </p>
+                                             <p class="textCenterd"> <?php echo hebrev($row["mistake_count"]); ?>   </p>
 
                                     </section>
 
@@ -155,10 +155,6 @@
 
                                                     <?php 
                                                     
-
-
-
-
 
                                                             if($result3->num_rows>0)
                                                             {
@@ -203,9 +199,7 @@
 
 
                                                                     
-                                                                 
-
-
+                                                                
                                                                         echo "  <section class='quizDataBox'> 
                                                                     <img src='images/animal".$row3["animal_test"].".png' width='64px' height='64px' class='centerImg'>
                                                                     <section class='dataBoxOneLine marginTopTen'><section class='dataBoxText textCenterd'> ".  $row1_data ."  </section></section>
@@ -238,9 +232,12 @@
 
     </body>
 
-    <?php
-        mysqli_close($connection);
-    ?>
+
 
 
 </html>
+
+
+    <?php
+        mysqli_close($connection);
+    ?>

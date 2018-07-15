@@ -19,6 +19,7 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
             <script src="includes/inbox1.js" async></script>
+            <link href="https://fonts.googleapis.com/css?family=Rubik&amp;subset=hebrew" rel="stylesheet">
 
 
     </head>
@@ -66,7 +67,7 @@
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb" id="breadLeft">
                                                 <li class="breadcrumb-item active" aria-current="page">הודעות</li>
-                                                <li class="breadcrumb-item"><a href="index.php">בית</a></li>
+                                                <li class="breadcrumb-item"><a href="indexTutor.php">בית</a></li>
                                             </ol>
                                         </nav>
                                     </section>
@@ -103,9 +104,9 @@
 
                                                                                                     echo "<tr> 
                                                                                                     <th scope='col' class='notBold'> " . " <img src=". 'images/student_'.$row["pic_num"] . ".png". " height='46' width='46'>" ." </th>
-                                                                                                    <th scope='col' class='notBold textCenter'> ".$row["user_name"]." </th>
+                                                                                                    <th scope='col' class='notBold textCenter fontGoogle'> ".hebrev($row["user_name"])." </th>
                                                                                                     <th scope='col' class='notBold textCenter'> <form action=". "userDate.php". " method="."post> "."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."    <button class="."btn-link btnBorder"."      type="."submit >".$row["user_id"]."  </button ></form>  </th>
-                                                                                                    <th scope='col' class='notBold textCenter'> ".$row["message_date"]." </th>
+                                                                                                    <th scope='col' class='notBold textCenter fontGoogle'> ".hebrev($row["message_date"])." </th>
                                                                                                     <th scope='col' class='notBold textCenter'> <form action=". "massageData.php". " method="."post> "."<input type="."hidden "." name="."massageId "." value="  .$row["id"].    ">"."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."   <button class="."btn-link btn "."      type="."submit >".$row["message_title"]."  </button ></form>   </th>
                                                                                                      </tr>";
 
@@ -146,3 +147,8 @@
 
 
 </html>
+
+
+   <?php
+        mysqli_close($connection);
+    ?>
