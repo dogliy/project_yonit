@@ -110,6 +110,7 @@ function screenTest(e){
     $('#topMenuSearchBox').remove();
     $('#userLogInPlace').remove();
     $('#logoLink').remove();
+    
     if(e.matches){
         $('#LogoBoxMobile').append(logoLink);
         $('#addSearchFormMobile').append($form); 

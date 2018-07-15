@@ -36,7 +36,7 @@
                 <main>  
                                 <section id="logInPageOut">
                                         <section id="logInPageIn">
-                                            <h1><p class="textCenterd indexPageText logInMarginTop">התחברות</p></h1>
+                                            <h1 p class="textCenterd indexPageText logInMarginTop">התחברות</h1>
                                             <section class="dataBoxOneLine marginTopTen" ><section class="LogInPageButtonBox"><button type="button" id="LogInPageStudent"  class="logInPageButton "> חניך </button></section></section>
                                             <section class="dataBoxOneLine marginTopTen" ><section class="LogInPageButtonBox"><button type="button" id="LogInPageTutor"  class="logInPageButton "> חונך </button></section></section>
                                         </section>

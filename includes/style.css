@@ -9,19 +9,14 @@
 }
 
 #userTable{
-
-        width: 650px;
-         
+        width: 90%;
         margin-top:30px;
-        
         margin-right: 17px;
-
         margin:0 auto;
-        
 }
 
 #userGradeTable{
-        width: 400px;
+        width: 80%;
         margin-top:30px;
         margin-right: 17px;
         margin:0 auto;
@@ -203,6 +198,7 @@
     float:left;
     width: 100%;
     height: 400px;
+ 
     
     
 }
@@ -378,9 +374,15 @@
 
 #userTableIn{
     direction: rtl;
-    width:700px;
+    width:100%;
     text-align: right;
     
+}
+
+#userTableMessageIn{
+    direction: rtl;
+    width:100%;
+    text-align: right;
 }
 
 input[type=submit]:hover{
@@ -420,7 +422,7 @@ input[type=submit]:hover{
 
 #userGradeTableIn{
     direction: rtl;
-    width:400px;
+    width:100%;
     text-align: right;
 }
 
@@ -735,8 +737,18 @@ border-color:none !important;
     height: 80px;  
 }
 
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type="date"]
+{
+    -webkit-appearance: none;
+}
+
 #fillFormDateBox{
-    width: 30%;
+    width: 48%;
     float: right;
 }
 
@@ -775,7 +787,7 @@ border-color:none !important;
 
 #fillFormTotalTimeBox{
     float: left;
-    width:30%;
+    width:48%;
 }
 
 #studentSelect{
@@ -821,6 +833,31 @@ border-color:none !important;
     width: 100%;
     float: left;
 }
+
+
+@media screen and  (max-width:650px) and (min-width:576px){
+
+    #userTableIn tr :nth-child(4), #userTableIn
+    tr :nth-child(7) {
+    display: none;
+    }
+
+    #userTableIn{
+            width:100%;
+    }
+
+    
+
+    #userTableMessageIn  tr :nth-child(4),
+    #userTableMessageIn  tr :nth-child(2)
+   {
+
+        display: none;
+    }
+
+
+}
+
 
 @media screen and  (max-width:576px)
 {
@@ -885,7 +922,28 @@ border-color:none !important;
         margin-top:20px;
     }
 
+    
+    
+    #userTableIn tr :nth-child(4), #userTableIn
+    tr :nth-child(5), #userTableIn
+    tr :nth-child(6), #userTableIn
+    tr :nth-child(7) {
+    display: none;
+    }
 
+    #userTableMessageIn  tr :nth-child(4),
+    #userTableMessageIn  tr :nth-child(2)
+   {
+
+        display: none;
+    }
+
+   
+
+ 
+
+
+    
    
     
 }

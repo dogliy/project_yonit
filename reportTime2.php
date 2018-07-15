@@ -18,10 +18,10 @@
     }
 
 
-    if( isset($_POST['datePhp'])  AND isset($_POST['StartTimePhp']) AND isset($_POST['totalTimePhp']) AND isset($_POST['meetingLocationPhp']) AND isset($_POST['meetingSubjectPhp']) AND isset($_POST['travelCostPhp']))
+    if( isset($_POST['datePhp'])   AND isset($_POST['totalTimePhp']) AND isset($_POST['meetingLocationPhp']) AND isset($_POST['meetingSubjectPhp']) AND isset($_POST['travelCostPhp']))
     {
             
-            $query1="INSERT INTO user_202_meeting_info(name,total_hours,meeting_location,meeting_content,travel_cost,user_id,date_F,time_F) VALUES ('".$selectOption."','".$_POST['totalTimePhp']."','".$_POST['meetingLocationPhp']."','".$_POST['meetingSubjectPhp']."','".$_POST['travelCostPhp']."','".$selectOption."','".$_POST['datePhp']."','".$_POST['StartTimePhp']."')";
+            $query1="INSERT INTO user_202_meeting_info(name,total_hours,meeting_location,meeting_content,travel_cost,user_id,date_F) VALUES ('".$selectOption."','".$_POST['totalTimePhp']."','".$_POST['meetingLocationPhp']."','".$_POST['meetingSubjectPhp']."','".$_POST['travelCostPhp']."','".$selectOption."','".$_POST['datePhp']."')";
             if($connection->query($query1)==TRUE)
             {
                 echo '<script> alert("נוספה רשומה בהצלחה");</script>';
@@ -140,13 +140,7 @@
                                                                 <input type="date"  name="datePhp"  class="form-control" id="fillFormDate" />
                                                             </div>
 
-                                                            <section id="fillFormTimeBoxOut">
-                                                                <div class="form-group"  id="fillFormTimeBox">
-                                                                    <label for="formGroupExampleInput2" class="floatright">&nbsp; &nbsp;משעה  </label>
-                                                                    <input type="time" name="StartTimePhp" class="form-control" id="fillFormFromTime" min="1"max="24">
-
-                                                                </div>
-                                                            </section>
+                                                            
 
                                                             <div class="form-group"  id="fillFormTotalTimeBox" >
                                                                 <label for="formGroupExampleInput2" class="floatright">סהכ שעות</label>
@@ -225,7 +219,6 @@
                                                             while($row=$result->fetch_assoc()){
                                                                     echo "<section class=' oneRowInfo ' '>
                                                                     <section class='oneRowInfoDateOut allWidth'  '>  <section class='textCenter oneRowInfoDateOutIn' '>" . $row["date_F"] .  " </section>  </section> 
-                                                                    <section class='oneRowInfoStartTimeOut allWidth'  '>  <section class='textCenter oneRowInfoStartTimein' '>" . $row["time_F"] .  " </section>  </section> 
                                                                     <section class='oneRowInfoStartTotalTimeOut allWidth'  '>  <section class='textCenter oneRowInfoStartTotalTimeIn' '>" . $row["total_hours"] .  " </section>  </section>
                                                                     <section class='oneRowInfoStartPlaceOfMeetingOut allWidth'  '>  <section class='textCenter oneRowInfoStartPlaceOfMeetingIn fontGoogle' '>" . $row["meeting_location"] .  " </section>  </section>
                                                                     <section class='oneRowInfoMeetingSubjectOut allWidth'  '>  <section class='textCenter oneRowInfoMeetingSubjectIn fontGoogle' '>" . $row["meeting_content"] .  " </section>  </section>
@@ -239,15 +232,8 @@
 
 
 
-                                                 
-
-
-
-
-                                                            
+                                                                               
                             </section>
-
-
                     </section>
 
                 </main>         

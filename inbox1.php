@@ -81,8 +81,8 @@
                         </section>
                         <section id="userTableOut">
                                 <section id="userTable">
-
-                                    <table class="table table-striped" id="userTableIn">
+                                
+                                    <table class="table table-striped" id="userTableMessageIn">
                                                 <thead>
                                                     <tr>
                                                     <th scope="col" >תמונה</th>
