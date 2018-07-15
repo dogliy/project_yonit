@@ -15,7 +15,7 @@
 <html>
     <head>
 
-            <title>Ismart home</title>
+            <title>Time report</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="includes/style.css">
@@ -24,16 +24,17 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
             <script src="includes/reportTime1.js" async></script>
+            <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
 
 
     </head>
-
+    
 
 
     <body>
            <div id="wrapper">  
                 <header>
-                       <section id="LogoBoxpc"><a id="logo"></a></section>
+                       <section id="LogoBoxpc"><a id="logo" href="indexTutor.php"></a></section>
                     <nav class="navbar navbar-expand-sm navbar-light .bg-white" id="topMenuNav">
                          <section id="LogoBoxMobile"></section>
                             <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="mobileMenuButton">
@@ -64,6 +65,12 @@
                 
 
                 <main>
+                         <section id="h1HeadOut">
+                                <section id="h1HeadIn">
+                                                    <h1 class="smallFontSize">iSmart anywhere anytime</h1>
+                                </section>
+                        </section>
+
 
                         <section id="mainUserMenu">
                             <section id="mainUserMenuIn">
@@ -79,6 +86,8 @@
                             </section>
                         </section>
 
+                       
+
 
                         <section id="selectStudent">    
 
@@ -90,8 +99,8 @@
 
                                         <section id="selectUserSmallBoxOut">
                                             <section id="selectUserSmallBoxIn">
-                                                <select class="custom-select form-control" id="selectUser" name="selectUserPhp">
-                                                    <option selected>...</option> 
+                                                <select class=" form-control" id="selectUser" name="selectUserPhp">
+                                                    <option selected></option> 
                                                 </select>
                                             </section>
                                         </section>

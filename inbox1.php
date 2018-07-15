@@ -20,7 +20,7 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
             <script src="includes/inbox1.js" async></script>
             <link href="https://fonts.googleapis.com/css?family=Rubik&amp;subset=hebrew" rel="stylesheet">
-
+            <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
 
     </head>
 
@@ -29,7 +29,7 @@
     <body>
            <div id="wrapper">  
                 <header>
-                       <section id="LogoBoxpc"><a id="logo"></a></section>
+                       <section id="LogoBoxpc"><a id="logo" href="indexTutor.php"></a></section>
                     <nav class="navbar navbar-expand-sm navbar-light .bg-white" id="topMenuNav">
                          <section id="LogoBoxMobile"></section>
                             <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="mobileMenuButton">
@@ -60,6 +60,11 @@
                 
 
                 <main>
+                        <section id="h1HeadOut">
+                                <section id="h1HeadIn">
+                                                    <h1 class="smallFontSize">iSmart anywhere anytime</h1>
+                                </section>
+                        </section>
 
                         <section id="mainUserMenu">
                             <section id="mainUserMenuIn">
@@ -105,9 +110,9 @@
                                                                                                     echo "<tr> 
                                                                                                     <th scope='col' class='notBold'> " . " <img src=". 'images/student_'.$row["pic_num"] . ".png". " height='46' width='46'>" ." </th>
                                                                                                     <th scope='col' class='notBold textCenter fontGoogle'> ".hebrev($row["user_name"])." </th>
-                                                                                                    <th scope='col' class='notBold textCenter'> <form action=". "userDate.php". " method="."post> "."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."    <button class="."btn-link btnBorder"."      type="."submit >".$row["user_id"]."  </button ></form>  </th>
+                                                                                                    <th scope='col' class='notBold textCenter'> <form action=". "userDate.php". " method="."post> "."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."    <button class="."buttonNoBorder"."      type="."submit >".$row["user_id"]."  </button ></form>  </th>
                                                                                                     <th scope='col' class='notBold textCenter fontGoogle'> ".hebrev($row["message_date"])." </th>
-                                                                                                    <th scope='col' class='notBold textCenter'> <form action=". "massageData.php". " method="."post> "."<input type="."hidden "." name="."massageId "." value="  .$row["id"].    ">"."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."   <button class="."btn-link btn "."      type="."submit >".$row["message_title"]."  </button ></form>   </th>
+                                                                                                    <th scope='col' class='notBold textCenter'> <form action=". "massageData.php". " method="."post> "."<input type="."hidden "." name="."massageId "." value="  .$row["id"].    ">"."<input type="."hidden "." name="."userId "." value="  .$row["user_id"].    ">"."   <button class="."buttonNoBorder "."      type="."submit >".$row["message_title"]."  </button ></form>   </th>
                                                                                                      </tr>";
 
 

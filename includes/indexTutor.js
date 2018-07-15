@@ -6,6 +6,8 @@ logoLink.style.height="33px";
 logoLink.style.display="block";
 logoLink.style.cssFloat="left";
 logoLink.id='logoLink';
+logoLink.href="indexTutor.php";
+
 
 
 var imgUserBoxLogIn=document.createElement('section');
@@ -78,7 +80,7 @@ $(document).ready(function(){
                             '<tr>' +  
                             '<td>' +  '<img src=' + "images/student_" + row.picUrl + '.png' + ' height=' +"46" + ' ' + 'width=' +"46>"  + '</td>' +
                             '<td>' + row.name + '</td>' +
-                            '<td>' + '<form action=' +"userDate.php"+ ' method=' +"post" + '><input type='+"hidden" + ' name=' +"userId" + ' value='+ row.id+ ' ><button class='+"btn-link btnBorder"+' type='+"submit"+'>'+row.id+'</button></form></td> '+
+                            '<td>' + '<form action=' +"userDate.php"+ ' method=' +"post" + '><input type='+"hidden" + ' name=' +"userId" + ' value='+ row.id+ ' ><button class='+" buttonNoBorder"+' type='+"submit"+'>'+row.id+'</button></form></td> '+
                             '<td>' + row.class + '</td>' +
                             '<td>' + row.subject + '</td>' +
                             '<td>' + row.school + '</td>' + 

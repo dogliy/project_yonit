@@ -6,7 +6,7 @@ logoLink.style.height="33px";
 logoLink.style.display="block";
 logoLink.style.cssFloat="left";
 logoLink.id='logoLink';
-
+logoLink.href="indexTutor.php";
 
 
 
@@ -130,7 +130,7 @@ function chackUser(userIdSearch){
                 '<tr>' +  
                 '<td>' +  '<img src=' + "images/student_" + i + '.png' + ' height=' +"46" + ' ' + 'width=' +"46>"  + '</td>' +
                 '<td>' + row.name + '</td>' +
-                '<td>' + '<a href=' +"http://www.ynet.co.il" +'>' + row.id + '</section>' + '</td>' +
+                '<td>' + '<a href=' +"#" +'>' + row.id + '</section>' + '</td>' +
                 '<td>' + row.class + '</td>' +
                 '<td>' + row.subject + '</td>' +
                 '<td>' + row.school + '</td>' + 
@@ -159,7 +159,7 @@ function chackUser(userIdSearch){
             var userIdbox=document.createElement('a');
             userIdbox.innerHTML=row.id;
             userIdbox.style.cssFloat="right";
-            userIdbox.href="http://www.ynet.co.il";
+            userIdbox.href="#";
             userIdbox.style.marginRight="20px";
             userIdbox.style.marginTop="12px";
             userIdbox.style.textDecoration="none";

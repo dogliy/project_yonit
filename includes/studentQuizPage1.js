@@ -6,6 +6,7 @@ logoLink.style.height="33px";
 logoLink.style.display="block";
 logoLink.style.cssFloat="left";
 logoLink.id='logoLink';
+logoLink.href="studentIndex.php";
 
 
 var imgUserBoxLogIn=document.createElement('section');

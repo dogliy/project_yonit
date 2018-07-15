@@ -297,6 +297,14 @@
 
 .smallFontSize{
     font-size: 20px;
+    color:#757575;
+    font-family: 'Gaegu', cursive;
+}
+
+.indexPageText{
+    font-size: 20px;
+    color:black;
+
 }
 
 .wrongAnswer{
@@ -375,6 +383,40 @@
     
 }
 
+input[type=submit]:hover{
+    text-decoration:underline;
+}
+
+
+.buttonNoBorder{
+    color: #0000EE; /* button text color */
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+      text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+    overflow: hidden;
+}
+
+.buttonNoBorder:hover{
+    text-decoration: none;
+}
+
+
+#h1HeadOut{
+    width: 100%;
+    height: 30px;
+    float:left;
+    margin-top:10px;
+}
+
+#h1HeadIn{
+    width: 80%;
+    height: 100%;
+    margin:0 auto;
+    text-align: center;
+
+}
 
 #userGradeTableIn{
     direction: rtl;
